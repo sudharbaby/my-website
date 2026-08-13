@@ -11,21 +11,32 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fff5f8;
+            background: #fff5f8;
             color: #333;
         }
 
         header {
-            background-color: #b83280;
-            color: white;
+            background: #f5c542;
+            color: #333;
             text-align: center;
-            padding: 25px;
+            padding: 25px 15px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 18px;
         }
 
         nav {
-            background-color: #7a1f5c;
+            background: #7a1f5c;
             text-align: center;
-            padding: 12px;
+            padding: 14px;
         }
 
         nav a {
@@ -37,12 +48,12 @@
 
         .hero {
             text-align: center;
-            padding: 50px 20px;
+            padding: 45px 20px;
         }
 
         .hero h2 {
             color: #b83280;
-            font-size: 32px;
+            font-size: 30px;
         }
 
         .hero p {
@@ -51,128 +62,101 @@
 
         .products {
             text-align: center;
-            padding: 30px 20px;
+            padding: 20px;
+        }
+
+        .products > h2 {
+            color: #b83280;
         }
 
         .product-box {
-            background-color: white;
-            width: 280px;
-            margin: 20px auto;
-            padding: 25px;
+            background: white;
+            width: 320px;
+            max-width: 85%;
+            margin: 25px auto;
+            padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 4px 12px #ccc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .product-box img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
         }
 
         .product-box h3 {
             color: #b83280;
+            margin: 15px 0 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .order-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .order-button:hover {
+            opacity: 0.85;
         }
 
         .contact {
             text-align: center;
-            background-color: #f7d7e7;
+            background: #f7d7e7;
             padding: 35px 20px;
-        }
-
-        .contact button {
-            background-color: #b83280;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-size: 16px;
+            margin-top: 30px;
         }
 
         footer {
-            background-color: #7a1f5c;
+            background: #7a1f5c;
             color: white;
             text-align: center;
             padding: 15px;
         }
-        .product-box{
-    background:white;
-    width:320px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    text-align:center;
-}
 
-.product-box img{
-    max-width:100%;
-    border-radius:10px;
-}
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
 
-.product-box h3{
-    margin:12px 0 5px;
-}
+            header p {
+                font-size: 16px;
+            }
 
-.product-box p{
-    font-size:20px;
-    font-weight:bold;
-}
+            .hero h2 {
+                font-size: 25px;
+            }
 
-.product-box button{
-    background:#25D366;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
-}
+            nav a {
+                margin: 0 8px;
+            }
 
-.product-box button:hover{
-    opacity:0.85;
-}
-
-header{
-    background: #f5c542;
-    padding: 20px;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-}
-
-header h1{
-    margin: 0;
-    font-size: 30px;
-}
-
-header p{
-    margin: 8px 0 0;
-    font-size: 18px;
-}
-@media (max-width: 600px){
-    .product-box{
-        width: 85%;
-        padding: 15px;
-    }
-
-    .product-box img{
-        width: 100%;
-        height: auto;
-    }
-
-    header h1{
-        font-size: 25px;
-    }
-
-    header p{
-        font-size: 16px;
-    }
-}
+            .product-box {
+                width: 85%;
+            }
+        }
     </style>
 </head>
 
 <body>
-<header>
-    <h1>Handmade Bangles</h1>
-    <p>Beautiful Handmade Bangles</p>
-</header>
+
     <header>
         <h1>✨ Handmade Bangles ✨</h1>
         <p>Beautiful Bangles Made With Love</p>
     </header>
+
     <nav>
         <a href="#">Home</a>
         <a href="#products">Products</a>
@@ -187,47 +171,72 @@ header p{
     <section class="products" id="products">
 
         <h2>Our Products</h2>
+
+        <!-- Gold Bangle -->
         <div class="product-box">
-    <img src="bangle2.jpg" width="300">
-    <h3>Handmade Gold Bangle</h3>
-<p>Price: ₹70</p>
 
-<a href="https://wa.me/919789215409?text=I%20want%20to%20order%20the%20Handmade%20Gold%20Bangle"
-target="_blank">
-    <button>Order Now</button>
-</a>
-    <h3>Handmade Gold Bangle</h3>
-    <p>Price: ₹70</p>
+            <img src="bangle2.jpg" alt="Handmade Gold Bangle">
 
-    <a href="https://wa.me/919789215409?text=I%20want%20to%20buy%20the%20Handmade%20Gold%20Bangle"
-       target="_blank">
-        <button>Buy Now</button>
-    </a>
-</div>
-        <img src="bangle1.jpg" width="300">
-        <h3>Handmade Red Bangle</h3>
-        <p>Price: ₹120</p>
-        <a href="https://wa.me/919789215409?text=I%20want%20to%20order%20the%20Handmade%20Red%20Bangle"
-target="_blank">
-    <button>Order Now</button>
-</a>
+            <h3>Handmade Gold Bangle</h3>
 
-<p>Price: ₹120</p>
-<a href="https://wa.me/919789215409?text=I%20want%20to%20buy%20the%20Handmade%20Red%20Bangle"
-target="_blank">
-<button>Buy Now</button>
-</a>
+            <p class="price">Price: ₹70</p>
 
+            <a class="order-button"
+               href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20to%20order%20the%20Handmade%20Gold%20Bangle"
+               target="_blank">
+                💬 Order Now
+            </a>
+
+        </div>
+
+        <!-- Red Bangle -->
         <div class="product-box">
+
+            <img src="bangle1.jpg" alt="Handmade Red Bangle">
+
+            <h3>Handmade Red Bangle</h3>
+
+            <p class="price">Price: ₹120</p>
+
+            <a class="order-button"
+               href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20to%20order%20the%20Handmade%20Red%20Bangle"
+               target="_blank">
+                💬 Order Now
+            </a>
+
+        </div>
+
+        <!-- Custom Bangles -->
+        <div class="product-box">
+
             <h3>💍 Handmade Bangles</h3>
+
             <p>Beautiful handmade designs.</p>
-            <p><b>Price: ₹___</b></p>
+
+            <p class="price">Price: Contact Us</p>
+
+            <a class="order-button"
+               href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20handmade%20bangles."
+               target="_blank">
+                💬 Enquire Now
+            </a>
+
         </div>
 
         <div class="product-box">
+
             <h3>✨ Custom Bangles</h3>
+
             <p>Custom designs available.</p>
-            <p><b>Price: ₹___</b></p>
+
+            <p class="price">Price: Contact Us</p>
+
+            <a class="order-button"
+               href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20a%20custom%20bangle."
+               target="_blank">
+                💬 Enquire Now
+            </a>
+
         </div>
 
     </section>
@@ -236,24 +245,20 @@ target="_blank">
 
         <h2>Contact Us</h2>
 
-        <p>For orders and enquiries, contact us.</p>
+        <p>For orders and enquiries, contact us on WhatsApp.</p>
 
-        <button>WhatsApp Us</button>
+        <a class="order-button"
+           href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20bangles."
+           target="_blank">
+            💬 WhatsApp Us
+        </a>
 
     </section>
 
     <footer>
         <p>© 2026 Handmade Bangles. All Rights Reserved.</p>
     </footer>
-<div style="text-align:center; margin:30px;">
-    <h2>Contact Us</h2>
-    <p>For orders and enquiries, contact us on WhatsApp.</p>
 
-    <a href="https://wa.me/919789215409?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20bangles."
-       target="_blank">
-        <button>💬 WhatsApp Us</button>
-    </a>
-</div>
 </body>
 
 </html>
